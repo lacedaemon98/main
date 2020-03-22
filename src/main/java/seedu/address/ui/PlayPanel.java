@@ -37,8 +37,6 @@ public class PlayPanel extends UiPart<Region> {
     public PlayPanel(ObservableValue<Card> playingCard, ObservableValue<Boolean> flipped) {
         super(FXML);
 
-
-        // Load deck page when selected card changes.
         playingCard.addListener((observable, oldValue, newValue) -> {
             if (newValue == null) {
                 return;

@@ -8,6 +8,7 @@ import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.deck.Deck;
+import seedu.address.model.util.Mode;
 
 import java.util.List;
 
@@ -53,7 +54,8 @@ public class SelectDeckCommand extends Command {
 
         model.selectDeck(targetIdx);
         model.setSelectedDeck(filteredDeckList.get(targetIdx.getZeroBased()));
-      
+        model.setCurrentMode(Mode.VIEW);
+
         Deck selectedDeck = model.getDeck(targetIdx);
         return new CommandResult(String.format(MESSAGE_SUCCESS, selectedDeck));
     }
