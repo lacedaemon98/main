@@ -341,6 +341,8 @@ public class ModelManager implements Model {
             this.game = null;
             this.mode = Mode.VIEW;
             setCurrentMode(Mode.VIEW);
+            setPlayingCard(null);
+            setFlipped(false);
         }
         setPlayingCard(card);
         setFlipped(false);
@@ -358,6 +360,8 @@ public class ModelManager implements Model {
             this.game = null;
             this.mode = Mode.VIEW;
             setCurrentMode(Mode.VIEW);
+            setPlayingCard(null);
+            setFlipped(false);
         }
         setPlayingCard(card);
         setFlipped(false);
