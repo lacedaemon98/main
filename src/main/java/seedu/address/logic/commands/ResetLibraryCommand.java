@@ -17,6 +17,7 @@ public class ResetLibraryCommand extends Command {
     public CommandResult execute(Model model) {
         requireNonNull(model);
         model.setLibrary(new Library());
+        model.returnToLibrary();
         return new CommandResult(MESSAGE_SUCCESS);
     }
 }

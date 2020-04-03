@@ -79,6 +79,7 @@ public class PlayPanel extends UiPart<Region> {
                 instruction.setText("Did you get your answer right? Answer 'yes' or 'no'");
             } else {
                 back.setVisible(false);
+                instruction.setText("Type 'flip' to reveal back face");
             }
         });
 
