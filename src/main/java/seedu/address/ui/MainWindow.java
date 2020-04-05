@@ -69,7 +69,10 @@ public class MainWindow extends UiPart<Stage> {
         primaryStage.setY(primaryScreenBounds.getMinY());
         primaryStage.setWidth(primaryScreenBounds.getWidth());
         primaryStage.setHeight(primaryScreenBounds.getHeight());
-        primaryStage.setResizable(false);
+        primaryStage.setMinWidth(primaryScreenBounds.getWidth());
+        primaryStage.setMinHeight(primaryScreenBounds.getHeight());
+
+
 
 
         // Set dependencies

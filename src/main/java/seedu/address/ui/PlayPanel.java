@@ -11,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.model.deck.Deck;
 import seedu.address.model.deck.card.Card;
@@ -52,6 +53,8 @@ public class PlayPanel extends UiPart<Region> {
     @FXML
     Label instruction;
 
+    @FXML
+    VBox progressRoot;
 
 
 
@@ -60,6 +63,8 @@ public class PlayPanel extends UiPart<Region> {
         
         back.setVisible(false);
         progress.setProgress(0);
+        progress.prefWidthProperty().bind(progressRoot.widthProperty().subtract(40));
+
         progressPercent.setText("0.0%");
 
 

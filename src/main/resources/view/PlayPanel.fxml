@@ -33,7 +33,11 @@
                 <ColumnConstraints percentWidth="100" />
              </columnConstraints>
          <StackPane GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-background-color: #f4b184; -fx-border-width: 1 1 0 1;-fx-border-color: black; -fx-padding: 0 0 0 0 ;" >
-            <ProgressBar style="-fx-padding: 20 0 0 0 ;" fx:id="progress" minWidth="870" prefWidth="870" ></ProgressBar>
+            <VBox fx:id="progressRoot"  alignment="CENTER">
+                <children>
+             <ProgressBar style="-fx-padding: 20 0 0 0 ;" fx:id="progress" ></ProgressBar>
+                </children>
+            </VBox>
             <HBox alignment="TOP_LEFT">
                 <Region prefWidth="20"></Region>
                <Label  text="Cards attempted: " style="-fx-text-fill: black; -fx-font-size: 15;" />
