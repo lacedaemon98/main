@@ -118,6 +118,7 @@ image::ArchitectureSequenceDiagram.png[]
 
 The sections below give more details of each component.
 
+//tag::UI-component[]
 [[Design-Ui]]
 === UI component
 
@@ -134,6 +135,8 @@ The `UI` component,
 
 * Executes user commands using the `Logic` component.
 * Listens for changes to `Model` data so that the UI can be updated with the modified data.
+
+//end::UI-component[]
 
 [[Design-Logic]]
 === Logic component
@@ -208,7 +211,7 @@ Classes used by multiple components are in the `seedu.address.commons` package.
 == Implementation
 
 This section describes some noteworthy details on how certain features are implemented.
-
+// tag::selectdeck[]
 === Selecting a Deck
 ==== Current Implementation
 
@@ -229,6 +232,8 @@ When `SelectDeckCommand#execute()` is executed a list of currently available Dec
 
 ==== Design Considerations
 The UI will have to be constantly updated when we select to view a deck, and other decks might be selected afterward. As a result, an `ObservableValue<Deck>` variable will have to be updated constantly via the `ModelManager#setSelectedDeck()` method. Various event listeners are implemented in the UI classes (e.g `CardListPanel`, `DeckListPanel`) in order to instantly react if there is any changes to the selected deck.
+
+//end::selectdeck[]
 
 // tag::createdeck[]
 === Creating a Deck
@@ -800,6 +805,7 @@ A Card has two faces. One side for prompting the user and the other side for the
 [[spaced-repetition-system]] Space Repetition System::
 Spaced repetition is an evidence-based learning technique that is usually performed with flashcards. Newly introduced and more difficult flashcards are shown more frequently while older and less difficult flashcards are shown less frequently in order to exploit the psychological spacing effect
 
+// tag::views[]
 [[view]] View::
 There are three different views in FlashSpeed.
 
@@ -808,22 +814,24 @@ There are three different views in FlashSpeed.
 * <<play, Play View>>
 
 [[library-view]] Library View::
-The current screen where FlashSpeed shows the list of decks.
+When no deck is selected and no cards are shown
 
 .In Library view. No deck is selected.
 image::library.png[]
 
 [[deck-view]] Deck View::
-The current screen where FlashSpeed shows the list of cards in a selected deck.
+When a deck is selected and its cards are shown
 
 .In Deck view. A deck has been selected.
 image::Ui.png[]
 
-[[play]] Play View (Play)::
-Enters the play view (mode) of FlashSpeed. In this mode, users will be able to take advantage of the SRS to revise/memorise their flashcards.
+[[play]] Play View::
+When in a study session of a deck
 
 .In Play view. A deck is being studied.
 image::Ui2.png[]
+
+// end::views[]
 
 [appendix]
 == Product Survey

@@ -1,4 +1,4 @@
-= Pham Tran Tuan Linh - lacedaemon98 - Project Portfolio
+= Pham Tran Tuan Linh - Project Portfolio
 :site-section: AboutUs
 :imagesDir: ../images
 :stylesDir: ../stylesheets
@@ -17,45 +17,60 @@ By using FlashSpeed, you will learn faster and remember for longer!
 
 == Summary of contributions
 
-* *Major enhancement*: Develop everything related to User Interface (UI): colour scheme, displaying contents, placement of contents.
+* *Major enhancement 1*: Develop everything related to User Interface (UI): colour scheme, displaying contents, placement of contents.
 ** What it does: Allows the user to view and interact with the application
 ** Justification: This component is crucial to the application because it visualises the whole application in order for it to function.
-** Highlights: This component requires a lot of planning and in-depth analysis to the behaviours of all existing and future features. E.g: When and how the scenes should be switched?; When the user updates a content, how to show the updated content immediately?
+** Highlights: This component requires a lot of research, planning and in-depth analysis of the behaviours of all existing and future features. E.g: When and how the scenes should be switched?; JavaFX and FXML research; When the user updates a content, how to show the updated content immediately?
 ** Credits: address-book-level3
 
-* *Minor enhancement*: designed the application logo, contributed to the logic of other commands such as `select`, `play`, etc.
+* *Major enhancement 2*: Modify `LogicManager` and `ModelManger` classes and integrate them with GUI.
+** What it does: `LogicManager` and `ModelManager` facilitate the logic behind every command made by the user and reflect the changes on GUI,
+** Justification: These components act as the brain cells of FlashSpeed to process every operation.
+** Highlights: These components require in-depth understanding on the behaviours and the logic behind all features.
+** Credits: address-book-level3
+
+* *Minor enhancement*:
+** Contribute to the logic behind *Play view* commands and `select` command.
+** Design the application logo
+
+.Draft version (Left) and Final version (Right) of FlashSpeed logo
+image::logos.jpg[]
 
 * *Code contributed*: [https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=lacedaemon98&sort=groupTitle&sortWithin=title&since=2020-02-14&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false[Functional & Test code]]
 
 * *Other contributions*:
 
 ** Project management:
-*** Initiate discussions outside meetings.
-*** Actively try to spot bugs and report/fix them.
+*** Initiate discussions and generate ideas outside meetings.
 ** Enhancements to existing features:
 *** Display help without Internet connection needed: Show the User Guide directly when using `help` instead of just showing the link (Pull requests https://github.com/AY1920S2-CS2103T-W17-1/main/pull/194[#194], https://github.com/AY1920S2-CS2103T-W17-1/main/pull/195[#195])
-*** Spot and fix bugs in other features such as `reset`, `stop`, `exit`, etc. (Pull requests https://github.com/AY1920S2-CS2103T-W17-1/main/pull/271[#271], https://github.com/AY1920S2-CS2103T-W17-1/main/pull/175[#175], https://github.com/AY1920S2-CS2103T-W17-1/main/pull/193[#193])
+*** Spot and fix bugs in other members' features such as `reset`, `stop`, `exit`, etc. (Pull requests https://github.com/AY1920S2-CS2103T-W17-1/main/pull/271[#271], https://github.com/AY1920S2-CS2103T-W17-1/main/pull/175[#175], https://github.com/AY1920S2-CS2103T-W17-1/main/pull/193[#193])
+** Community:
+*** PRs reviewed: https://github.com/AY1920S2-CS2103T-W17-1/main/pull/295[#222]
+https://github.com/AY1920S2-CS2103T-W17-1/main/pull/335[#335]
 ** Documentation:
-*** Provide all the product screenshots in the User Guide and Developer Guide and update them when there are changes to the application
+*** Provide all the product screenshots in the User Guide and Developer Guide and update them when there are changes to the current application
 
 == Contributions to the User Guide
 
 |===
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
 |===
+include::../UserGuide.adoc[tag=views]
 
-include::../UserGuide.adoc#selectDeck
+include::../UserGuide.adoc[tag=faq]
 
-// include::../UserGuide.adoc[tag=dataencryption]
 
 == Contributions to the Developer Guide
 
 |===
 |_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._
 |===
+include::../DeveloperGuide.adoc[tag=UI-component]
 
-include::../DeveloperGuide.adoc#selecting-a-deck
+include::../DeveloperGuide.adoc[tag=selectdeck]
 
-// include::../DeveloperGuide.adoc[tag=dataencryption]
+include::../DeveloperGuide.adoc[tag=views]
+
 
 
