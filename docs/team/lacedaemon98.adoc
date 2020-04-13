@@ -84,6 +84,7 @@ include::../DeveloperGuide.adoc[tag=UI-component]
 {empty} +
 
 include::../DeveloperGuide.adoc[tag=selectdeck]
+
 {empty} +
 
 include::../DeveloperGuide.adoc[tag=views]
